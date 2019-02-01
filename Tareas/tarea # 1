@@ -1,0 +1,26 @@
+IEEE 754 es un estandar que ayuda a definir los numeros flotantes para operaciones.
+Establece que existen tres maneras de almacenar un flotante, de 4 Bytes, 8Bytes y 10 Bytes dependiendo el nivel de precision.
+
+Para usar el estandar existen 4 pasos:
+1 Normalizacion del entero
+2 Polarizar el exponente
+3 convertir la mantissa a binario
+4 representar teniendo en cuenta la precision
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bibliografia:
+
+https://steve.hollasch.net/cgindex/coding/ieeefloat.html
+
