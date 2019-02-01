@@ -1,4 +1,4 @@
-IEEE 754 es un estandar que ayuda a definir los numeros flotantes para operaciones.
+/*IEEE 754 es un estandar que ayuda a definir los numeros flotantes para operaciones.
 Establece que existen tres maneras de almacenar un flotante, de 4 Bytes, 8Bytes y 10 Bytes dependiendo el nivel de precision.
 
 Para usar el estandar existen 4 pasos:
@@ -6,8 +6,9 @@ Para usar el estandar existen 4 pasos:
 2 Polarizar el exponente
 3 convertir la mantissa a binario
 4 representar teniendo en cuenta la precision
+*/
 
-Biseccion:
+// Biseccion: //
 
 #include <stdio.h>
 #include <conio.h>
@@ -102,7 +103,7 @@ double Funcion(double X)
 
 
 
-Bibliografia:
+// Bibliografia:
 
-https://steve.hollasch.net/cgindex/coding/ieeefloat.html
+//https://steve.hollasch.net/cgindex/coding/ieeefloat.html
 
