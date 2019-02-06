@@ -1,0 +1,27 @@
+
+// Libreria Pracma en R:
+
+Es una libreria de R que contiene una gran cantidad de funciones utilizadas en analisis numerico, algebra lineal
+Sus siglas significan Practical Numerical Math Functions
+
+Algunas funciones:
+
+abm3pc	Adams-Bashford-Moulton
+akimaInterp	Univariate Akima Interpolation
+aitken	Aitken' Method
+barylag2d	2-D Barycentric Lagrange Interpolation
+and, or	Logical AND, OR (Matlab Style)
+andrewsplot	Andrews' Curves
+barylag	Barycentric Lagrange Interpolation
+arclength	Arc Length of a Curve
+angle	Basic Complex Functions
+accumarray	Accumulate Vector Elements
+disp,beep	Utility functions (Matlab style)
+bisect	Rootfinding Through Bisection
+brown72	Brownian Motion
+chebCoeff	Chebyshev Polynomials
+blkdiag	Block Diagonal Matrix
+brentDekker	Brent-Dekker Root Finding Algorithm
+chebPoly	Chebyshev Polynomials
+broyden	Broyden's Method
+crossn	n-dimensional Vector Cross Product
