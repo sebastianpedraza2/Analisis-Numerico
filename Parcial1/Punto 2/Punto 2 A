@@ -1,3 +1,6 @@
+
+
+
 funcion='tan(3,14159*x)-sin(3,14159*x)';
 
 fprintf('Valores para la funcion\n\n\n\n');
