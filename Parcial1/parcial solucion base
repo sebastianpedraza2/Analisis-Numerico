@@ -39,8 +39,23 @@ $x
 $iter
 [1] 1000
 
-significando: 
-X el vector resultante y el numero de iteraciones que se hizo = 1000, esto quiere decir que llego al maximo numero de iteraciones
+Evidenciando X como el vector resultante y el numero de iteraciones que se hizo = 1000, esto quiere decir que llego al maximo numero de iteraciones
 
 
+Cuando se corre el metodo en C se muestra lo siguiente
+
+Tabla de error:
+
+variable valor practico valor teórico Error
+
+x1        1.99999999700956          2           1.49 x 10^-9
+
+x2        4.99999999813465          5           3.73 x 10^-10
+
+x3        3.99999999649709          4           8.75 x 10^-10
+
+Total iteraciones: 3908
+
+Podemos decir que el algoritmo muestra una alta efectividad y exactitud ya que deja ver un  valor con una buena exactitud con respecto al teorico
+Para La ejecucion en jacobi se programo para que el n´umero de iteraciones fuera hasta que el error sea de E = 10−8, mientras que para el de C fue usada una precision de 15 cifras
 
