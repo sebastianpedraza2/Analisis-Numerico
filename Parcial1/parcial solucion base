@@ -7,8 +7,9 @@ Marzo 2019
 sebastian pedraza mancera
 Documento 1023495860
 1.
+a.)
 
-
+Ver punto 1 codigo
 
 
 2. 
@@ -16,7 +17,7 @@ a) Ver archivo codigo
 
 b) Aplicar otro metodo de: i. Punto fijo, ii. Newton Mejorado y compararlos explique cu´al es mejor y
 por que.
-numero de documento empieza en 1 realizar ii:
+Numero de documento empieza en 1 realizar ii:
 Se empleo el metodo de newton con las funciones respectivamente. 
 con f(x) = tan(πx) da como resultado: 
 
@@ -49,7 +50,7 @@ $iter
 
 Evidenciando X como el vector resultante y el numero de iteraciones que se hizo = 1000, esto quiere decir que llego al maximo numero de iteraciones
 
-
+Para La ejecucion en jacobi se programo para que el n´umero de iteraciones fuera hasta que el error sea de E = 10−8, mientras que para el de C fue usada una precision de 15 cifras
 Cuando se corre el metodo en C se muestra lo siguiente
 
 Tabla de error:
@@ -64,6 +65,6 @@ x3        3.99999999649709          4           8.75 x 10^-10
 
 Total iteraciones: 3908
 
-Podemos decir que el algoritmo muestra una alta efectividad y exactitud ya que deja ver un  valor con una buena exactitud con respecto al teorico
-Para La ejecucion en jacobi se programo para que el n´umero de iteraciones fuera hasta que el error sea de E = 10−8, mientras que para el de C fue usada una precision de 15 cifras
+Podemos decir que el algoritmo muestra una alta efectividad ya que deja ver un  valor con una buena exactitud con respecto al teorico
+
 
