@@ -1,0 +1,30 @@
+Pontificia Universidad Javeriana
+Facultad de Ciencias
+Departamento de Matem´aticas
+An´alisis Num´erico : Parcial I
+Eddy Herrera Daza
+Marzo 2019
+sebastian pedraza mancera
+Documento 1023495860
+1.
+
+
+
+2. numero de documento empieza en 1 realizar i:
+
+
+
+3.
+Al correr el codigo para el metodo Jacobi en R (ver archivo de codigo) con la matriz del punto 3 da como resultado:
+
+$x
+[1] 1.978405 4.986529 3.974704
+
+$iter
+[1] 1000
+
+significando: 
+X el vector resultante y el numero de iteraciones que se hizo = 1000, esto quiere decir que llego al maximo numero de iteraciones
+
+
+
