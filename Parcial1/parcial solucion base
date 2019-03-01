@@ -13,7 +13,7 @@ Documento 1023495860
 
 2. 
 
-b) Aplicar otro m´etodo de: i. Punto fijo, ii. Newton Mejorado y compararlos explique cu´al es mejor y
+b) Aplicar otro metodo de: i. Punto fijo, ii. Newton Mejorado y compararlos explique cu´al es mejor y
 por que.
 numero de documento empieza en 1 realizar i:
 Se empleo el metodo de newton con las funciones respectivamente. 
@@ -27,6 +27,13 @@ x_k                   f(x_k)              Error est.
 k =  1  x =  0.500000000000033  f(x) =  -4812956064893.53  Error estimado <=  -3.32359560107751e-14
 
 y con g(x) = sin(πx) da como resultado:
+
+---------------------------------------------------------------------------
+x_k                   f(x_k)              Error est.           
+      n---------------------------------------------------------------------------
+ 0.499999999999967  0.000000000000003  0.000000000000033 
+---------------------------------------------------------------------------
+k =  1  x =  0.499999999999967  f(x) =  2.98265551464249e-15  Error estimado <=  3.32660173688616e-14
 
 
 
