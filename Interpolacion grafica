@@ -1,0 +1,56 @@
+##Analisis numerico 
+
+install.packages("Matrix")#instalar paquete
+library(Matrix)
+install.packages("PolynomF")#instalar paquete
+library(PolynomF)
+
+##Puntos 
+
+x=c(6, 8, 10, 12, 14, 16, 18, 20)                                                                                                       
+y=c(7, 9, 12, 18, 21, 19, 15, 10)     
+
+
+datosx = x[0:8]
+datosy = y[0:8]
+res= poly.calc(datosx, datosy)
+res
+
+
+
+
+x2=c(6, 7, 8, 9, 10, 11, 12,11, 13, 14, 15, 16, 17, 18, 19, 20) 
+datosx2 = x2[1:15]
+datosy2= res(x2[1:15])
+datosy2
+
+  plot(datosx2, datosy2, pch=19, cex=1, col = "blue", asp=1,xlab="X", ylab="Y", main="Diagrama ")
+  curve(res, add=T, from =0, to =25)
+  //////////////////////////////////////////////////////////////
+  
+  
+  
+  
+  ##Puntos 
+
+x=c(6, 8, 10, 12, 14, 16, 18, 20)                                                                                                       
+y=c(7, 9, 12, 18, 21, 19, 15, 10)     
+
+
+datosx = x[0:8]
+datosy = y[0:8]
+res= poly.calc(datosx, datosy)
+res
+
+par(new =TRUE)
+
+
+plot(x,y, pch=19, cex=1, col = "red", asp=1,xlab="X", ylab="Y", main="Diagrama ")
+curve(res, add=T, from =0, to =25)
+x2=c(6, 7, 8, 9, 10, 11, 12,11, 13, 14, 15, 16, 17, 18, 19, 20) 
+datosx2 = x2[1:15]
+datosy2= res(x2[1:15])
+datosy2
+par(new= TRUE)
+  plot(datosx2, datosy2, pch=19, cex=1, col = "blue", asp=1,xlab="X", ylab="Y", main="Diagrama ")
+  curve(res, add=T, from =0, to =25)
