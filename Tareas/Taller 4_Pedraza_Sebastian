@@ -1,0 +1,105 @@
+install.packages("deSolve")
+require(deSolve)
+#punto 1
+rungekutta = function(f,t0,y0,h,n){
+  t = seq(t0, t0+n*h, by=h)
+  y = rep(NA, times=(n+1))
+  # length(t)==length(y)
+  y[1] = y0
+  for(k in 2:(n+1)){
+    k1=h/2*f(t[k-1],y[k-1])
+    k2=h/2*f(t[k-1]+h/2, y[k-1]+k1)
+    k3=h/2*f(t[k-1]+h/2, y[k-1]+k2)
+    k4=h/2*f(t[k-1]+h, y[k-1]+2*k3)
+    y[k] = y[k-1]+1/3*(k1+2*k2+2*k3+k4)
+  }
+  dat = cbind(t,y)
+  print(as.matrix(dat))
+  plot(t,y,pch=20, col="red")
+}
+solucionExacta = function(t) 
+{
+  return( 2/23*exp(t/2)*(23*cos((sqrt(23)*t)/2) - 2*sqrt(23) * sin((sqrt(23)*t)/2)))
+}
+#calculando para h = 0.1
+
+fp = function(x,t,parms)
+{
+  s = x - 1*x^2
+  return (list(s))
+}
+- exp(t/2) * (25* sqrt(23) * sin((sqrt(23)*t)/2) + 23 * cos((sqrt(23)*t)/2))/2
+
+tis= seq(0,20,1)
+# Usamos la función ode()
+sol = ode(c(2), tis, fp, parms=NULL, method = "rk4") # método Runge Kutta orden 4
+# Salida
+tabla = cbind(tis, sol[,2] )
+colnames(tabla) = c("ti", " Ti ")
+tabla
+# Representación
+plot(tis, sol[,2] )
+
+
+plot(solucionExacta, xlim = c(-4,5), ylim = c(-20,8))
+lines(rungekutta(fp,2,-1,0.1,20))
+rungekutta(fp,2,-1,0.2,20)
+#punto 2 
+
+euler1 = function(f,f2,t0, y0, h, n) {
+  #Datos igualmente espaciados iniciando en x0 = a, paso h. "n" datos 
+  t = seq(t0, t0 + (n-1)*h, by = h) # n datos
+  y = rep(NA, times=n) # n datos
+  y[1]=y0
+  x = rep(NA, times=n) # n datos
+  x[1]=t0
+  for(i in 2:n ) x[i]= x[i-1]+h*f(t[i-1], x[i-1])
+  for(i in 2:n ) y[i]= y[i-1]+h*f2(t[i-1], y[i-1])
+  print(cbind(t,y)) # print
+  plot(t,y, pch=19, col="red") # gráfica
+  print (cbind(t,x))
+  plot(y,x,pch=19, col="blue")
+}
+xprima = function(x,y) 3*x+2*y
+yprima <- function(x,y) 5*x-4*y
+n=10
+x0=3
+y0=6
+h=0.1
+euler1(xprima,yprima,x0, y0,h,n)
+
+
+#Punto 3
+rm(list=ls())
+require(deSolve)
+require(PolynomF)
+require(Matrix)
+options(digits = 4)
+rm(list=ls())
+funcionReal<-function(x){
+  yR <- x + (exp(x/2)*sin((sqrt(3)*x)/2))/sqrt(3) + exp(x/2)*cos((sqrt(3)*x)/2) 
+  return(yR)
+}
+funcion=function(t,y,parms){
+  dy <- y[2]
+  dz <- y[2]+t-y[1]-1
+  return(list(c(dy,dz)))
+}
+tis = seq(0,2,by = 0.1)
+yR = funcionReal(tis)
+plot(tis,yR,pch = 15, col = "red", cex = 1, xlim = c(0, 3), ylim = c(0, 5), xlab = "x", ylab = "y", main = "y''- y'- x + y +1 =0 con h = 0,1")
+par(new = TRUE)
+sol = ode(c(1,2),tis,funcion,parms=NULL,method = "rk4")
+tabla = data.frame(sol)
+plot(tis,tabla[,2], pch = 15, col = "blue", cex = 0.5,xlim = c(0, 3), ylim = c(0, 5), xlab = "x", ylab = "y")
+legend("topright",
+       c("analytical","rk4, h=0.1"),
+       lty = c(NA, NA), lwd = c(2, 1),
+       pch = c(16, 16),
+       col = c("red", "blue"))
+error <- (yR-tabla[,2])/tabla[,2]
+tablaError = data.frame(tis, round(yR, digits = 5),round(tabla[,2], digits = 5),round(error, digits = 5))
+colnames(tablaError) <- c("x","y()","y(RK4)","Error")
+tablaError
+errorGlobal <- sum(error)/length(error)
+errorGlobal
